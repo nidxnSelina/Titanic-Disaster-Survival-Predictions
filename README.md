@@ -72,4 +72,3 @@ Output:
 - test accuracy (comparing predictions with gender_submission.csv)
 - predictions saved to src/data/survival_predictions_r.csv
 
-
