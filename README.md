@@ -24,10 +24,14 @@ Output:
 
 ## Run locally (R)
 ### Install dependencies
-```Rscript src/R/install_packages.R```
+```
+Rscript src/R/install_packages.R
+```
 
 ### Run model training and prediction
-```Rscript src/R/run.R```
+```
+Rscript src/R/run.R
+```
 
 Output:
 - training accuracy
@@ -36,10 +40,14 @@ Output:
 
 ## Run with Docker (Python)
 ### Build Docker image
-```docker build -t titanic-student .```
+```
+docker build -t titanic-student .
+```
 
 ### Run container
-```docker run --rm titanic-student```
+```
+docker run --rm titanic-student
+```
 
 Output:
 - training accuracy
@@ -49,10 +57,14 @@ Output:
 
 ## Run with Docker (R)
 ### Build Docker image
-```docker build -t titanic-r -f src/R/Dockerfile .```
+```
+docker build -t titanic-r -f src/R/Dockerfile .
+```
 
 ### Run container
-```docker run --rm -v "$PWD/src/data":/app/data titanic-r```
+```
+docker run --rm -v "$PWD/src/data":/app/data titanic-r
+```
 
 Output:
 - training accuracy
