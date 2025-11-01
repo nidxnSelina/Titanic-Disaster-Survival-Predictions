@@ -3,10 +3,11 @@
 This project builds a binary classification model to predict passenger survival on the Titanic using the Kaggle Titanic dataset ([Titanic: Machine Learning from Disaster](https://www.kaggle.com/competitions/titanic/code)). Logistic regression model is used. The scripts perform data cleaning, train a logistic regression model, report training accuracy, and save predictions on the test set to a CSV file. This repository supports running both locally and on Docker using either Python or R.
 
 ## Prerequisites
-- Install Docker.
-- Prepare Local data files train.csv, test.csv, and gender_submission.csv in src/data/.
+- Download data from Kaggle: [Titanic: Machine Learning from Disaster](https://www.kaggle.com/competitions/titanic/code)
+- Load the following data files to src/data/: train.csv, test.csv, and gender_submission.csv.
+- Install Docker (optional — only needed if running via Docker)
 
-## Run locally (Python)
+## Run locally in Python
 ### Install dependencies
 ```
 pip install -r requirements.txt
@@ -22,7 +23,7 @@ Output:
 - test accuracy (comparing predictions with gender_submission.csv)
 - predictions saved to src/data/survival_predictions_python.csv
 
-## Run locally (R)
+## Run locally in R
 ### Install dependencies
 ```
 Rscript src/R/install_packages.R
@@ -38,7 +39,7 @@ Output:
 - test accuracy (comparing predictions with gender_submission.csv)
 - predictions saved to src/data/survival_predictions_r.csv
 
-## Run with Docker (Python)
+## Run via Docker in Python
 ### Build Docker image
 ```
 docker build -t titanic-student .
@@ -55,7 +56,7 @@ Output:
 - predictions saved to src/data/survival_predictions_python.csv
 
 
-## Run with Docker (R)
+## Run via Docker in R
 ### Build Docker image
 ```
 docker build -t titanic-r -f src/R/Dockerfile .
